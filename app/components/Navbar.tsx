@@ -12,12 +12,13 @@ import Logo from "./Logo";
 import { ModeToggle } from "@/components/ui/themeToggle";
 
 type Section = "home" | "about" | "services" | "contact" | "portfolio";
+const sections: Section[] = ["home", "about", "services", "portfolio", "contact"];
+
 
 export default function Navbar() {
   const [open, setOpen] = React.useState(false);
   const [active, setActive] = React.useState<Section>("home");
 
-  const sections: Section[] = ["home", "about", "services", "portfolio", "contact"];
 
   // Desktop button refs for arrow-key navigation
   const desktopRefs = React.useRef<(HTMLButtonElement | null)[]>([]);
